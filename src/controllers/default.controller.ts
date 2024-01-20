@@ -1,8 +1,8 @@
 import { Request, Response } from "express";
-import SpeakerService from "../services/speaker.services";
+import SoundPlayerService from "../services/soundplayer.services";
 
 export default class DefaultController {
-    speakerService = new SpeakerService();
+    soundPlayerService = new SoundPlayerService();
 
     constructor(){
         //Bind methods to use this within
@@ -14,7 +14,7 @@ export default class DefaultController {
     }
 
     async notify(req: Request, res: Response) {
-        this.speakerService.playNotificationSound();
+        this.soundPlayerService.playNotificationSound();
         res.send("Playing Okay Lets goo");
     }
 }

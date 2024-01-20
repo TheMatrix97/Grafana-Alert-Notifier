@@ -3,7 +3,7 @@ import {SoundPlayer, SoundOptions} from '../types/soundplayer.types'
 
 const playerOptions: SoundOptions = {opts:{}};
 
-export default class SpeakerService {
+export default class SoundPlayerService {
     basePath = '../resources';
     player: SoundPlayer = require('play-sound')(playerOptions);
     constructor(){}
